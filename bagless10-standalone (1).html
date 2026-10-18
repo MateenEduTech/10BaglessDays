@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bagless 10 – Learn by Doing. Discover by Exploring.</title>
+<meta name="description" content="Hands-on learning activities for teachers and students of Classes 6, 7 and 8.">
+<meta name="theme-color" content="#3b3fd8">
+
+
+<style>:root{--bg:#f7f6ff;--alt:#efeeff;--card:#fff;--ink:#1a1846;--mut:#5a5984;--pri:#4338ca;--pri2:#7c3aed;--teal:#14b8a6;--coral:#ff6b5b;--sun:#ffc93c;--lav:#b79cff;--line:#e0def7;--sh:0 10px 30px -12px rgba(67,56,202,.35);--r:22px;font-family:"Segoe UI","Trebuchet MS",system-ui,sans-serif}
+:root[data-theme=dark]{--bg:#0f0e26;--alt:#16153a;--card:#201f50;--ink:#f1f0ff;--mut:#b6b5df;--pri:#8b8dff;--pri2:#c4a1ff;--line:#34336e;--sh:0 10px 30px -12px #000a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.65;padding-bottom:env(safe-area-inset-bottom)}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.12;margin:0 0 .5rem;letter-spacing:-.01em}
+h1{font-size:clamp(2.5rem,7.5vw,4.8rem)}h2{font-size:clamp(1.7rem,4vw,2.4rem)}
+h2::after{content:"";display:block;width:84px;height:5px;border-radius:9px;margin-top:10px;background:linear-gradient(90deg,var(--coral),var(--sun),var(--teal),var(--pri2))}
+.final h2::after,.panel h3::after{display:none}
+a{color:inherit}.sr,.skip{position:absolute;left:-9999px}.skip:focus{left:8px;top:8px;background:#fff;color:#000;padding:8px;z-index:99}
+:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:10px 20px;padding-top:calc(10px + env(safe-area-inset-top));background:color-mix(in srgb,var(--bg) 78%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:9px;font:700 1.25rem Georgia,serif;text-decoration:none;margin-right:auto;background:linear-gradient(90deg,var(--pri),var(--pri2),var(--coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand img{border-radius:10px}
+nav{display:flex;gap:20px}nav a{text-decoration:none;color:var(--mut);font-weight:600;font-size:.95rem}nav a:hover{color:var(--pri)}
+.icon-btn{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;width:40px;height:40px;font-size:1.1rem;cursor:pointer}.menu{display:none}
+@media(max-width:760px){.menu{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:14px 20px;border-bottom:1px solid var(--line)}nav.open{display:flex}}
+.hero{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:64px 6vw 72px;overflow:hidden;background:linear-gradient(135deg,#e6e4ff 0%,#fff0ec 55%,#e2fbf6 100%)}
+:root[data-theme=dark] .hero{background:linear-gradient(135deg,#1c1a56,#2a1747 55%,#0f2f3a)}
+.hero>*{position:relative;z-index:1}.hero>.blob,.hero>.floaters{position:absolute;z-index:0}
+.blob{border-radius:50%;filter:blur(50px);opacity:.55}.b1{width:320px;height:320px;background:var(--lav);top:-80px;left:-60px}.b2{width:280px;height:280px;background:var(--sun);right:10%;bottom:-90px}.b3{width:240px;height:240px;background:var(--teal);right:-60px;top:10%;opacity:.4}
+.floaters{inset:0;pointer-events:none}.floaters span{position:absolute;left:var(--x);top:var(--y);font-size:2rem;animation:fl 7s ease-in-out var(--d) infinite;filter:drop-shadow(0 6px 8px #0003)}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding:36px 20px 48px}}
+.tag{display:inline-block;background:linear-gradient(90deg,var(--sun),#ffe38a);color:#3a2f00;padding:6px 16px;border-radius:99px;font-weight:700;font-size:.88rem;box-shadow:var(--sh)}
+h1{background:linear-gradient(100deg,var(--ink) 30%,var(--pri) 70%,var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:14px}
+.lead{font-size:1.12rem;color:var(--mut);max-width:56ch}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0 12px}
+.btn{display:inline-block;padding:13px 24px;border-radius:16px;font-weight:700;text-decoration:none;border:2px solid var(--pri);cursor:pointer;font-size:1rem;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:var(--sh)}
+.primary{background:linear-gradient(135deg,var(--pri),var(--pri2));border-color:transparent;color:#fff}.ghost{background:transparent;color:var(--pri)}.ghost.light{color:#fff;border-color:#fff}
+.final .primary{background:linear-gradient(135deg,var(--sun),#ffb347);color:#2b2300}
+.subtle{color:var(--pri);font-weight:600;font-size:.95rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pills span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:4px 14px;font-size:.82rem;font-weight:600;color:var(--mut)}
+.credit{font-size:.85rem;color:var(--mut);margin-top:18px}
+.scene{width:100%;max-width:470px;justify-self:center;border-radius:36px;background:linear-gradient(#bfdcff,#fff1cf);box-shadow:0 30px 60px -25px rgba(67,56,202,.55),0 0 0 8px #fff8;transform:rotate(2deg)}
+.float{animation:fl 6s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-12px)}}
+.sec{padding:60px 6vw}.alt{background:var(--alt)}.muted{color:var(--mut);margin:.4rem 0 1.2rem;max-width:70ch}
+.searchbox input{width:100%;font-size:1.2rem;padding:18px 22px;border-radius:20px;border:2px solid var(--line);background:var(--card);color:var(--ink);box-shadow:var(--sh)}
+.searchbox input:focus{border-color:var(--pri2)}
+.filters{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0;padding:14px;background:var(--card);border:1px solid var(--line);border-radius:18px}
+.filters label{display:flex;flex-direction:column;font-size:.78rem;font-weight:700;color:var(--mut);gap:3px}
+select{padding:9px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font-size:.95rem;max-width:210px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}.three{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 12px 18px;display:flex;flex-direction:column;gap:9px;text-align:left;color:inherit;font:inherit;cursor:pointer;text-decoration:none;box-shadow:var(--sh);transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--c,var(--pri))}
+.card>:not(.art){padding:0 8px}.card h3{font-size:1.15rem}.card p{margin:0;color:var(--mut);font-size:.92rem}
+.art{position:relative;height:104px;border-radius:15px;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 45%,#fff))}
+.art.tall{height:136px}.art i{font-style:normal;font-size:2.8rem;position:relative;z-index:1;filter:drop-shadow(0 6px 6px #0003)}.tall i{font-size:3.6rem}
+.art::before,.art::after{content:"";position:absolute;border-radius:50%;background:#fff;opacity:.22}.art::before{width:110px;height:110px;right:-30px;top:-40px}.art::after{width:70px;height:70px;left:-16px;bottom:-26px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;font-size:.76rem}.meta span{background:var(--alt);padding:2px 10px;border-radius:99px;font-weight:600}
+.meta .ctag{background:color-mix(in srgb,var(--c) 18%,var(--card));color:var(--ink)}
+.scroller{display:flex;gap:18px;overflow-x:auto;padding:6px 4px 16px;scroll-snap-type:x mandatory}.scroller .card{min-width:272px;max-width:272px;scroll-snap-align:start}
+.path{list-style:none;padding:0;margin:26px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.path li a{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-left:6px solid var(--c);border-radius:var(--r);padding:14px 18px;text-decoration:none;box-shadow:var(--sh);transition:transform .2s}.path li a:hover{transform:translateX(4px)}
+.path b{flex:none;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 55%,#fff));color:#fff;font:700 1.4rem Georgia,serif;line-height:1;text-align:center;padding-top:6px}
+.path b small{display:block;font:600 .6rem "Segoe UI",sans-serif;letter-spacing:.06em}
+.chips{display:flex;flex-wrap:wrap;gap:12px}.chip{padding:11px 20px;border-radius:99px;border:2px solid transparent;background:var(--card);color:var(--ink);font:inherit;font-weight:700;cursor:pointer;box-shadow:var(--sh);transition:transform .2s}.chip:hover{transform:translateY(-3px)}
+.chips .chip:nth-child(4n+1){border-color:var(--coral)}.chips .chip:nth-child(4n+2){border-color:var(--teal)}.chips .chip:nth-child(4n+3){border-color:var(--sun)}.chips .chip:nth-child(4n){border-color:var(--pri2)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--sh);border-top:6px solid var(--pri2)}.panel:nth-child(2){border-top-color:var(--teal)}.panel:nth-child(3){border-top-color:var(--coral)}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin-bottom:10px}summary{cursor:pointer;font-weight:700}
+.strip{height:10px;background:linear-gradient(90deg,var(--coral),var(--sun),var(--teal),var(--pri),var(--pri2))}
+.final{text-align:center;padding:76px 6vw;color:#fff;background:radial-gradient(circle at 15% 20%,#7c3aed 0,transparent 50%),radial-gradient(circle at 85% 80%,#14b8a6 0,transparent 50%),#3730a3}.final .cta{justify-content:center}.final h2{font-size:clamp(2rem,5vw,3rem)}
+footer{padding:32px 6vw;text-align:center;color:var(--mut);font-size:.9rem}
+dialog{border:none;border-radius:26px;max-width:min(520px,92vw);background:var(--card);color:var(--ink);padding:26px}dialog::backdrop{background:#0009}
+dialog h3{font-size:1.5rem}dialog ul{padding-left:20px}.back{background:none;border:none;color:var(--pri);font-weight:700;cursor:pointer;font-size:1rem;padding:0 0 12px}
+.empty{padding:24px;border:2px dashed var(--line);border-radius:var(--r);color:var(--mut)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+dialog{max-width:min(680px,94vw);max-height:90vh;overflow:auto;padding:22px}
+dialog .art{height:110px;margin-bottom:14px}dialog h4{margin:18px 0 6px;font:700 1.05rem Georgia,serif;color:var(--pri)}
+dialog ul,dialog ol{margin:0;padding-left:22px}dialog li{margin-bottom:6px}
+.steps{list-style:none;counter-reset:s;padding:0!important}.steps li{counter-increment:s;position:relative;padding:10px 12px 10px 50px;background:var(--alt);border-radius:14px;margin-bottom:8px}
+.steps li::before{content:counter(s);position:absolute;left:10px;top:9px;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9rem}
+.safe{margin-top:14px;padding:12px 14px;border-left:5px solid var(--coral);background:color-mix(in srgb,var(--coral) 14%,var(--card));border-radius:12px}
+
+.dev{display:inline-flex;align-items:center;gap:14px;margin-top:20px;padding:8px 20px 8px 8px;background:var(--card);border:1px solid var(--line);border-radius:99px;box-shadow:var(--sh)}
+.dev img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--sun);flex:none}
+.dev p{margin:0;line-height:1.3;display:flex;flex-direction:column}.dev small{font-size:.72rem;color:var(--mut);font-weight:600}.dev strong{font:700 1.05rem Georgia,serif}.dev span{font-size:.82rem;color:var(--mut)}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="#/"><span class="logo" aria-hidden="true">🎒</span><span>Bagless 10</span></a>
+  <nav id="nav" aria-label="Main">
+    <a href="#search">Activities</a><a href="#categories">Categories</a><a href="#journey">10-Day Journey</a><a href="#teachers">Teachers</a><a href="#faq">FAQ</a>
+  </nav>
+  <button id="theme" class="icon-btn" aria-label="Toggle dark mode">◐</button>
+  <button id="menu" class="icon-btn menu" aria-label="Open menu" aria-expanded="false">☰</button>
+</header>
+
+<main id="main">
+<div id="home">
+<section class="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="floaters" aria-hidden="true"><span style="--x:6%;--y:14%;--d:0s">✏️</span><span style="--x:46%;--y:8%;--d:1s">🍃</span><span style="--x:90%;--y:20%;--d:2s">🔬</span><span style="--x:52%;--y:84%;--d:.5s">📐</span><span style="--x:3%;--y:78%;--d:1.5s">🌱</span><span style="--x:94%;--y:76%;--d:2.5s">🎨</span></div>
+  <div class="hero-text">
+    <p class="tag">Learn by Doing. Discover by Exploring.</p>
+    <h1>The World Is Your Classroom.</h1>
+    <p class="lead">Discover exciting hands-on activities, explore practical skills, create something extraordinary, and turn everyday experiences into opportunities to learn.</p>
+    <div class="cta">
+      <a class="btn primary" href="#search">Explore Activities</a>
+      <a class="btn ghost" href="#journey">Discover the 10-Day Journey</a>
+    </div>
+    <a class="subtle" href="#teachers">Teacher Workspace</a>
+    <div class="pills" aria-label="Highlights"><span>20 categories</span><span>40 activities</span><span>Classes 6, 7 and 8</span><span>Works offline</span></div>
+    <div class="dev"><img src="data:image/jpeg;base64,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" alt="Dr. Mateen Yousuf" width="64" height="64"><p><small>Developed by</small><strong>Dr. Mateen Yousuf</strong><span>Teacher, School Education Department</span></p></div>
+  </div>
+  <svg class="scene" viewBox="0 0 400 360" role="img" aria-label="Illustration of students planting a seedling, building a paper bridge and observing nature">
+    <circle cx="300" cy="70" r="40" fill="#ffd84d"/>
+    <path d="M0 290 Q120 230 220 280 T400 260 V360 H0Z" fill="#17b3a3"/>
+    <path d="M0 320 Q150 270 400 310 V360 H0Z" fill="#3b3fd8" opacity=".85"/>
+    <g class="float"><path d="M60 80c30-30 60-10 50 30-35 10-55-5-50-30z" fill="#ff6f61"/><rect x="330" y="150" width="14" height="60" rx="4" fill="#b79cff" transform="rotate(25 337 180)"/><path d="M40 190l22-30 22 30z" fill="#ffd84d"/></g>
+    <g><circle cx="110" cy="215" r="18" fill="#f4c9a0"/><rect x="92" y="233" width="36" height="55" rx="14" fill="#ff6f61"/><path d="M128 250l40 28" stroke="#f4c9a0" stroke-width="9" stroke-linecap="round"/>
+    <path d="M178 290v-26" stroke="#2e8b57" stroke-width="5"/><path d="M178 266c-18-2-22-16-22-16s20-2 22 16zM178 262c16-2 20-16 20-16s-18-2-20 16z" fill="#4cc38a"/><ellipse cx="178" cy="292" rx="26" ry="7" fill="#7a4b2a"/></g>
+    <g><circle cx="270" cy="205" r="18" fill="#d9a77a"/><rect x="252" y="223" width="36" height="65" rx="14" fill="#ffd84d"/><path d="M215 262h70" stroke="#fff" stroke-width="7"/><path d="M205 270h90" stroke="#fff" stroke-width="5" opacity=".7"/></g>
+    <g><circle cx="335" cy="240" r="15" fill="#f1bd90"/><rect x="321" y="255" width="30" height="40" rx="12" fill="#b79cff"/><circle cx="305" cy="225" r="9" fill="none" stroke="#fff" stroke-width="3"/></g>
+  </svg>
+</section>
+
+<section id="search" class="sec">
+  <h2>What would you like to learn today?</h2>
+  <p class="muted">Find your next hands-on learning experience.</p>
+  <form id="sform" role="search" class="searchbox">
+    <label class="sr" for="q">Search activities</label>
+    <input id="q" type="search" placeholder="What would you like to learn today?" autocomplete="off">
+  </form>
+  <div class="filters">
+    <label>Class<select id="fcls"><option value="">All</option><option>6</option><option>7</option><option>8</option></select></label>
+    <label>Duration<select id="fdur"><option value="">Any</option><option value="q">Up to 30 min</option><option value="m">31–60 min</option><option value="l">Over 60 min</option></select></label>
+    <label>Difficulty<select id="fdif"><option value="">Any</option><option>Easy</option><option>Medium</option></select></label>
+    <label>Category<select id="fcat"></select></label>
+    <label>Material<select id="fmat"><option value="">Any</option><option>paper</option><option>cardboard</option><option>leaves</option><option>seeds</option><option>containers</option><option>clay</option></select></label>
+  </div>
+  <p id="count" class="muted" aria-live="polite"></p>
+  <div id="results" class="grid"></div>
+</section>
+
+<section id="categories" class="sec alt">
+  <h2>Explore by category</h2>
+  <p class="muted">Twenty areas of practical learning. Choose one to open its activities.</p>
+  <div id="catgrid" class="grid cats"></div>
+</section>
+
+<section id="featured" class="sec">
+  <h2>Featured activities</h2>
+  <p class="muted">Suggested activities that teachers can adapt to their own context.</p>
+  <div id="feat" class="scroller"></div>
+</section>
+
+<section id="journey" class="sec alt">
+  <h2>The ten-day learning journey</h2>
+  <p class="muted">These themes are suggestions. Teachers can adapt, reorder or replace them to suit their own classroom.</p>
+  <ol id="days" class="path"></ol>
+</section>
+
+<section class="sec">
+  <h2>Explore by skill</h2>
+  <div id="skills" class="chips"></div>
+</section>
+
+<section class="sec alt">
+  <h2>Quick activities</h2>
+  <p class="muted">Ready in 15 to 30 minutes.</p>
+  <div id="quick" class="scroller"></div>
+</section>
+
+<section class="sec">
+  <h2>Learn with everyday materials</h2>
+  <p class="muted">Low-cost materials found at home or school.</p>
+  <div id="mats" class="chips"></div>
+</section>
+
+<section class="sec alt">
+  <h2>Local skills and traditions</h2>
+  <p class="muted">Activities that help students notice crafts, farming, food and heritage in their own area. Always involve local people and check facts together.</p>
+  <div id="local" class="grid"></div>
+</section>
+
+<section id="teachers" class="sec">
+  <h2>For teachers</h2>
+  <div class="grid three">
+    <div class="panel"><h3>Browse</h3><p>Search by class, time, difficulty and materials to find an activity that fits your lesson.</p></div>
+    <div class="panel"><h3>Customize</h3><p>Reorder the ten-day themes, swap activities and adapt each task to your students.</p></div>
+    <div class="panel"><h3>Plan and review</h3><p>Save activities to your device and use the reflection prompts to discuss student work.</p></div>
+  </div>
+</section>
+
+<section id="mine" class="sec alt">
+  <h2>My learning journey</h2>
+  <p class="muted">Saved activities are stored only on this device.</p>
+  <div id="saved" class="grid"></div>
+</section>
+
+<section id="faq" class="sec">
+  <h2>Frequently asked questions</h2>
+  <div id="faqlist"></div>
+</section>
+
+<div class="strip" aria-hidden="true"></div>
+<section class="final">
+  <h2>Your Next Discovery Starts Here.</h2>
+  <div class="cta"><a class="btn primary" href="#search">Explore the Activity Library</a><a class="btn ghost light" href="#mine">Start Your Learning Journey</a></div>
+</section>
+</div>
+
+<section id="page" class="sec" hidden></section>
+</main>
+
+<footer>
+  <p><strong>Bagless 10</strong> – Learn by Doing. Discover by Exploring.</p>
+  <p>Developed by Dr. Mateen Yousuf<br>Teacher, School Education Department</p>
+</footer>
+
+<dialog id="dlg"><div id="dlgbody"></div><form method="dialog"><button class="btn primary">Close</button></form></dialog>
+<script>const CATS=[
+["Art and Creative Crafts","🎨","#ff6f61"],["Pottery and Traditional Crafts","🏺","#c8793c"],["Carpentry and Construction Models","🔨","#7a5af8"],["Gardening and Agriculture","🌱","#2e9e5b"],
+["Science Experiments","🔬","#3b82f6"],["Mathematics in Everyday Life","📐","#f59e0b"],["Electrical Safety and Technology","💡","#eab308"],["Food, Nutrition and Kitchen Science","🥗","#ef4444"],
+["Environment and Sustainability","♻️","#17b3a3"],["Culture, Heritage and Local Traditions","🏛️","#a855f7"],["Outdoor Exploration","🧭","#0ea5a4"],["Community and Vocational Learning","🤝","#f97316"],
+["Life Skills","🧵","#ec4899"],["Communication and Storytelling","📖","#6366f1"],["Digital Creativity","🖥️","#06b6d4"],["Entrepreneurship and Financial Literacy","🪙","#84cc16"],
+["Art, Music and Performance","🎵","#d946ef"],["Physical Skills and Teamwork","🏃","#22c55e"],["Observation and Discovery","🔭","#3b3fd8"],["Jammu and Kashmir Special Collection","🏔️","#0891b2"]];
+// [category, title, description, classes, minutes, difficulty, materials, skill]
+const ACTS=[
+[0,"Create Art From Natural Patterns","Collect fallen leaves, bark and petals. Make rubbings with a crayon and arrange them into a pattern or picture. Discuss which shapes repeat in nature.","6,7,8",45,"Easy","paper, leaves, crayons","Creativity"],
+[0,"Paper Collage Landscape","Tear coloured paper from old magazines and layer it into a landscape with a foreground, middle ground and background.","6,7",40,"Easy","paper, glue, old magazines","Creativity"],
+[1,"Make a Clay Pinch Pot","Roll a ball of clay, press a thumb into the centre and slowly pinch the walls thinner. Smooth the surface and let it dry in the shade.","6,7,8",50,"Medium","clay, water","Practical skills"],
+[1,"Explore Traditional Crafts","Invite a local craftsperson to class or visit one. Prepare three questions about tools, materials and how the skill was learned, then write a short report.","7,8",60,"Medium","notebook","Communication"],
+[2,"Build a Paper Bridge","Using only paper and tape, design a bridge that spans 20 cm. Test how many coins it holds, then improve the design by folding or rolling the paper.","6,7,8",45,"Medium","paper, tape, coins","Problem-solving"],
+[2,"Cardboard House Model","Draw a plan of a simple house, measure and cut cardboard walls, and join them with glue. Add a roof that sheds rain.","7,8",90,"Medium","cardboard, glue, ruler","Teamwork"],
+[3,"Grow Your First Plant","Soak bean seeds overnight, plant them in a reused cup with soil and water lightly. Measure growth every two days and record it in a chart.","6,7,8",20,"Easy","seeds, containers, soil","Environmental awareness"],
+[3,"Design a Miniature Garden","Plan a small garden in a tray with soil, pebbles and small plants. Sketch the layout first and explain why each plant is placed where it is.","6,7,8",60,"Medium","containers, soil, seeds","Creativity"],
+[4,"Investigate Floating and Sinking","Predict whether ten classroom objects will float, then test them in a basin of water. Change the shape of a clay ball so that it floats.","6,7",30,"Easy","containers, clay, water","Scientific thinking"],
+[4,"Discover the Science of Shadows","Use a torch and a paper cut-out to explore how a shadow changes as the light moves. Measure shadow length at three distances.","6,7,8",30,"Easy","paper, torch, ruler","Scientific thinking"],
+[5,"Measure Your Classroom with Handspans","Measure the desk and room using handspans, then compare with a ruler. Discuss why standard units are useful.","6",25,"Easy","ruler, notebook","Problem-solving"],
+[5,"Plan a Class Picnic Budget","Choose a menu, estimate costs and make a budget table. Compare two plans and decide which gives better value.","7,8",50,"Medium","notebook, calculator","Problem-solving"],
+[6,"Spot the Safety Hazards Walk","Walk around the school with a checklist and note possible electrical and fire hazards. Never touch sockets or wires. Report findings to a teacher.","6,7,8",30,"Easy","notebook","Observation"],
+[6,"Build a Simple Battery Circuit","With an adult present, connect a small bulb to a single AA cell using wires. Draw the circuit and test what happens when you break it. Use only battery power.","7,8",40,"Medium","battery, small bulb, wire","Scientific thinking"],
+[7,"Build a Balanced Plate","Draw a plate and fill it with foods from different food groups. Compare it with a day of meals you ate and suggest one improvement.","6,7,8",30,"Easy","paper, colours","Practical skills"],
+[7,"Kitchen Science: Acids and Bases","Use red cabbage juice as an indicator and test lemon juice and baking-soda water. Record the colour changes. Do not taste test liquids.","7,8",45,"Medium","containers, red cabbage, lemon","Scientific thinking"],
+[8,"Design a Recycled-Material Organizer","Turn clean boxes and tins into a desk organizer. Sketch the design, decorate it and explain what waste it saved.","6,7,8",60,"Easy","cardboard, containers, glue","Environmental awareness"],
+[8,"Measure Your Waste for a Week","Sort household waste into paper, plastic, food and other. Make a bar chart and suggest two ways to reduce it.","7,8",30,"Medium","notebook","Environmental awareness"],
+[9,"Interview an Elder About a Tradition","Ask a family elder about a festival, recipe or custom. Record the answers and share one story with the class.","6,7,8",45,"Easy","notebook","Communication"],
+[9,"Collect Local Proverbs","Gather five proverbs from family and neighbours. Write what each means and when it is used.","6,7",35,"Easy","notebook","Communication"],
+[10,"Start a Nature Observation Journal","Choose one tree near school. Draw it and note the weather, insects and birds once a week for a month.","6,7,8",20,"Easy","notebook, pencil","Observation"],
+[10,"Map Your School Environment","Draw a map of the school with a key and scale. Mark trees, water points and shaded areas.","6,7,8",60,"Medium","paper, ruler, pencil","Problem-solving"],
+[11,"Meet a Community Helper","Invite a nurse, farmer, shopkeeper or tailor to speak. Prepare questions and write a thank-you note.","6,7,8",50,"Easy","notebook","Communication"],
+[11,"Plan a Cleanliness Drive","Choose a small area, set a goal, assign roles and clean it safely with gloves. Reflect on what worked.","7,8",90,"Medium","gloves, bags","Teamwork"],
+[12,"Learn to Sew a Button","Thread a needle, tie a knot and stitch a button onto old cloth. Ask an adult to supervise needle use.","7,8",25,"Easy","cloth, needle, thread","Practical skills"],
+[12,"Make a First-Aid Checklist","List what a simple first-aid box should hold and why. Check it with a teacher or school nurse.","6,7,8",25,"Easy","notebook","Practical skills"],
+[13,"Tell a Story in Six Panels","Plan a story with a beginning, middle and end. Draw it as six panels and present it to a partner.","6,7",40,"Easy","paper, pencil","Communication"],
+[13,"Hold a Mini Interview","Work in pairs. Write five open questions, interview your partner and summarise the answers in a paragraph.","7,8",30,"Easy","notebook","Communication"],
+[14,"Create a Digital Poster","Use any simple poster tool on a school device to design a poster on a topic you care about. Check spelling and credit your sources.","7,8",45,"Medium","school device","Creativity"],
+[14,"Plan a Stop-Motion Clip","Storyboard 12 frames with paper figures, then photograph each small move and play the frames in order.","7,8",60,"Medium","paper, camera or phone","Creativity"],
+[15,"Run a Class Mini Market","Make handmade items, price them and play-trade with classroom tokens. Count and compare profit afterwards.","7,8",60,"Medium","paper, tokens","Teamwork"],
+[15,"Needs and Wants Sort","Cut out pictures and sort them into needs and wants. Discuss why people may sort them differently.","6,7",25,"Easy","paper, old magazines","Problem-solving"],
+[16,"Make a Rubber-Band Instrument","Stretch rubber bands of different thickness over an open box. Pluck them and describe how pitch changes with tightness.","6,7,8",30,"Easy","containers, rubber bands","Scientific thinking"],
+[16,"Perform a Short Skit","In groups, write a two-minute skit about a community problem and perform it. Give each member a role.","6,7,8",50,"Easy","none","Teamwork"],
+[17,"Team Relay Challenge","Design a relay with three stations, such as carrying, balancing and passing. Agree safe rules before starting.","6,7,8",40,"Easy","cones or bottles","Teamwork"],
+[17,"Balance and Coordination Course","Set up a safe course on flat ground with a line to walk and a beanbag to toss. Record times and retry to improve.","6,7",30,"Easy","rope, cloth bag","Practical skills"],
+[18,"Create a Paper Periscope","Fold and tape a long paper box, then fix two small mirrors at 45 degrees at each end. Use it to look over a wall.","7,8",45,"Medium","cardboard, mirrors, tape","Scientific thinking"],
+[18,"Make a Simple Weather Journal","Record the sky, temperature feel and wind each day for two weeks. Look for patterns in a chart.","6,7,8",15,"Easy","notebook","Observation"],
+[19,"Explore Papier-Mâché Patterns","Study patterns on traditional papier-mâché items if you can see some. Then decorate a paper-pulp bowl with your own pattern.","7,8",60,"Medium","paper, glue, water","Creativity"],
+[19,"Seasonal Foods of Our Region","Ask family which foods are eaten in each season. Draw a seasonal calendar and note how food is stored.","6,7,8",40,"Easy","notebook, colours","Observation"]
+];
+const FEATURED=["Grow Your First Plant","Build a Paper Bridge","Discover the Science of Shadows","Design a Miniature Garden","Create Art From Natural Patterns","Make a Simple Weather Journal","Explore Traditional Crafts","Design a Recycled-Material Organizer","Investigate Floating and Sinking","Map Your School Environment","Create a Paper Periscope","Start a Nature Observation Journal"];
+const DAYS=[["Discover Your Community",11],["Create With Your Hands",0],["Grow With Nature",3],["Experiment and Explore",4],["Discover Culture and Heritage",9],["Learn Everyday Life Skills",12],["Explore the World of Work",11],["Invent and Create",2],["Care for Your Environment",8],["Showcase and Reflect",13]];
+const SKILLS=["Creativity","Communication","Teamwork","Observation","Problem-solving","Practical skills","Scientific thinking","Environmental awareness"];
+const MATS=["paper","cardboard","leaves","seeds","containers","clay"];
+const FAQ=[
+["How do I find an activity?","Type a word into the search box, or use the filters for class, time, difficulty, category and materials."],
+["How do I choose a suitable activity?","Check the class, duration and materials on each card. Start with Easy activities, then try Medium ones."],
+["How can teachers use Bagless 10?","Browse activities, adapt the ten-day themes, and use the saved list to plan lessons and discuss student work."],
+["Do I need special materials?","No. Most activities use paper, cardboard, containers and other low-cost items."],
+["Is safety covered?","Every activity should be done with adult supervision. Never use mains electricity, sharp tools or chemicals without a teacher."],
+["Are these official activities?","No. They are suggested activities that teachers can adapt, reorder or replace."]];
+
+// [learning goal, steps (|), discuss (|), safety, go further]
+const DET=[
+["Notice repeating shapes in nature and use them to design a pattern artwork.","Walk outside and collect 5 to 8 fallen leaves, petals or bits of bark. Never pick from living plants.|Place a leaf under thin paper, vein side up, and rub gently with the side of a crayon until the pattern appears.|Make rubbings of at least three different items and compare them.|Tear or cut the rubbings into shapes and arrange them as a repeating border, a pattern or a picture.|Glue down your best arrangement and give it a title.|Walk around the room and look at classmates' work.","Which lines or shapes repeated in more than one item?|Why might a leaf have veins?","Wash your hands after handling outdoor items. Do not touch unknown plants.","Photograph your pattern and compare it with a pattern on a local craft."],
+["Show distance in a picture by layering shapes.","Choose a scene such as hills, a river and a village.|Tear coloured paper into shapes. Use pale colours for far away and bold colours for near.|Glue the sky and the far hills first.|Add the middle layer, then foreground details such as trees or houses.|Let the edges overlap so the layers show depth.|Title your work and write one sentence about the place.","How did colour show distance?|What changed when you tore the paper instead of cutting it?","Use child-safe glue. Carry scissors closed.","Add texture with scraps of cloth or dry leaves."],
+["Learn to shape clay by hand and keep the walls even.","Knead the clay for about a minute to remove air bubbles.|Roll a ball about the size of a small lime.|Press your thumb into the centre, leaving a base about 1 cm thick.|Pinch and turn the clay slowly, thinning the walls to about 1 cm.|Smooth any cracks with a slightly damp finger.|Dry the pot slowly in the shade for two to three days, turning it daily.","Why should clay dry slowly?|What made the walls uneven, and how did you fix it?","Cover tables. Wash hands afterwards. Do not sweep dry clay dust into the air.","Press a leaf or a carved pattern into the surface before it dries."],
+["Learn how a craft is made and valued by talking to the person who practises it.","With your teacher's approval, choose a craft or craftsperson from your area.|Write three questions about tools, materials, how they learned and how long a piece takes.|Visit or invite them with an adult. Ask permission before taking notes or photos.|Listen carefully, take notes and sketch one tool.|Write a one-page report in your own words.|Write a short thank-you note.","Which skills does this craft need?|How could young people help keep the craft alive?","Visit only with a teacher or family adult. Do not touch tools without permission.","Try one simple step of the craft with the artisan's guidance."],
+["Test how shape makes a structure stronger.","Place two books 20 cm apart as supports.|Design A: lay a flat sheet across and add coins one at a time. Record how many it holds.|Design B: fold the paper into pleats like a fan and test again.|Design C: roll tubes or add side walls, then test.|Put all results in a table and compare.|Improve your best design and retest.","Why did folding help?|How do real bridges use shape for strength?","Keep books clear of feet. Stop testing if the bridge slides.","Predict and test a longer span."],
+["Turn measurements into a scale model.","Choose a scale, for example 1 cm = 50 cm.|Draw a plan showing rooms, doors and windows.|Convert real sizes to model sizes and mark them on cardboard.|Cut the pieces. A teacher or adult handles any blade.|Fold tabs and glue the walls together.|Add a sloped roof, decorate and label each room.","How did the scale help you plan?|Why do roofs slope in rainy or snowy places?","Only an adult uses blades. Cut on a mat. Tape sharp edges.","Add a garden fence and calculate its length."],
+["Observe how a seed becomes a plant and record the changes.","Soak 3 to 4 bean seeds overnight.|Make drainage holes in a clean reused cup and fill it with soil.|Plant one seed about 2 cm deep and water lightly.|Place it near a bright window. Keep the soil moist, not soggy.|Every two days, measure the height and draw what you see.|After two weeks, plot the heights on a line graph.","What did the seed need to grow?|What do you predict would happen in the dark?","Wash hands after touching soil. Do not eat seeds.","Grow a second plant in shade and compare."],
+["Plan a living space and learn what plants need.","Sketch a top view with beds, paths and a small pond made from a bottle cap.|Put a layer of pebbles in a shallow tray, then soil on top.|Mark the paths with pebbles.|Plant seeds or small cuttings according to your plan.|Water gently with a spoon or spray.|Label the plants and check them weekly.","Why are pebbles placed under the soil?|How did you use the space wisely?","Wash hands. Do not plant or touch unknown plants.","Add a cup that collects rainwater."],
+["Predict, test and explain floating and sinking.","List 10 objects and predict whether each floats or sinks.|Fill a basin about three-quarters with water.|Test the objects one at a time and record the result.|Compare your predictions with the results.|Shape a clay ball into a boat and test it. Add paper clips as cargo.|Count how many paper clips it carries.","What do the floating objects have in common?|Why did the shape of the clay matter?","Wipe spills at once. Keep electrical items away from water.","Add salt to the water and see whether objects float more easily."],
+["Discover how light, objects and distance create shadows.","Darken the room and place a torch on a table.|Hold a paper cut-out between the torch and a wall.|Measure the shadow height with the cut-out 30, 60 and 90 cm from the wall.|Record the results in a table.|Raise and lower the torch and note what changes.|Make a shadow puppet and act out a short scene.","When was the shadow biggest?|Why do shadows change during the day?","Never shine a torch into anyone's eyes. Never look at the Sun.","Track a stick's shadow outdoors at three times of day."],
+["See why standard units of measurement are needed.","Measure the length of a desk in handspans and note it down.|Ask a partner to measure the same desk.|Compare. Do you agree?|Measure the desk with a ruler in centimetres.|Work out how many centimetres your handspan is.|Discuss why standard units are useful.","Why were the results different?|Where do standard units matter in a shop?","Keep walkways clear.","Measure the room in footsteps, then in metres, and compare."],
+["Plan with money, quantity and priorities.","Decide the group size and a budget limit.|List the food and drink you want.|Estimate prices from your own knowledge of local shops. Mark them clearly as estimates.|Multiply price by quantity and find the total.|Compare two menus and choose the better value.|Present your plan to the class.","What did you drop to stay within budget?|How accurate might your estimates be?","Check for food allergies before planning a menu.","Add transport costs and update the budget."],
+["Recognise common electrical and fire risks so accidents can be prevented.","Your teacher explains: we look, we do not touch.|Make a checklist: damaged wires, overloaded sockets, wet areas and blocked exits.|Walk in pairs and tick what you see.|Note each location on a sketch map.|Report your findings to the teacher.|Create a poster with three safety rules.","Which risk is the most urgent?|Who should fix it?","Do not touch sockets, switches or wires. Stay with your group.","Draw a safety map of the school."],
+["Understand a complete circuit using a safe low-voltage source.","An adult checks the AA cell and a small torch bulb.|Draw the circuit you plan to build.|Connect the bulb to the cell with two wires and tape the ends.|Light the bulb and draw what you did.|Break the circuit by lifting one wire and observe.|Test a paper clip, an eraser and a coin in the circuit and sort them into conductors and insulators.","Why does the bulb need a complete loop?|What is a switch?","Use only one AA battery. Never use mains sockets. Disconnect if anything feels warm.","Build a paper switch."],
+["Learn the food groups and design a balanced meal.","Learn the groups: grains, pulses and proteins, vegetables, fruits, milk products, and fats.|Draw a large plate.|Write down what you ate yesterday.|Sort each food into its group.|Find the groups that are missing.|Redesign the plate to balance it, then share.","Which group was missing?|Why is variety important?","Be sensitive: families have different food choices and resources. No judging.","Plan a balanced menu for a week."],
+["Use a natural indicator to test everyday substances.","The teacher prepares red cabbage water with hot water and lets it cool.|Pour the indicator into clear cups.|Add lemon juice to one, baking-soda water to another and plain water to a third.|Observe and record the colours.|Test other safe items, such as diluted vinegar or soapy water.|Sort the substances into acids and bases.","What colour changes did you see?|Why might the indicator change colour?","Never taste the liquids. Adults handle hot water. Wash hands afterwards.","Make indicator paper strips."],
+["Reuse materials to solve a real storage problem.","List the items you want to store.|Collect clean boxes and tins with no sharp edges.|Sketch a design and measure it.|Cover rough edges with tape. A teacher checks every tin.|Glue and join the sections.|Decorate with paper or paint.|Write how much waste you saved.","What else could be reused?|How does reusing help the environment?","A teacher checks tins for sharp edges.","Make a set for the whole class."],
+["Understand how much waste a household makes and how to reduce it.","Prepare four bags: paper, plastic, food and other.|Sort one week's waste. Wear gloves.|Weigh or count each day's waste.|Draw a bar chart.|Find the biggest group.|Suggest two ways to reduce it and try one.|Report back after a week.","What surprised you?|Which change would help most?","Wear gloves. Do not touch glass or sharp items. Wash hands afterwards.","Compost food scraps."],
+["Preserve and respect local knowledge.","Choose an elder and ask permission.|Prepare five questions, for example: What was life like when you were my age?|Interview them and take notes.|Thank them for their time.|Write their story in your own words.|Share one story with the class.","What has changed over time?|What should we keep?","Interview family members in a safe, comfortable place.","Create a class book of stories."],
+["Explore language and shared values.","Ask family and neighbours for five proverbs.|Write each exactly as told.|Explain what each means.|Give an example of when it is used.|Illustrate one proverb.|Compare the class collection.","Which values appear again and again?|Which proverb would help someone today?","Choose respectful sayings only.","Explain a proverb in another language."],
+["Build the habit of careful observation.","Choose one tree or spot near school.|Write the date, time and weather.|Draw what you see and label it.|Count insects or birds for five minutes.|Write one question you have.|Repeat weekly for four weeks.|Compare your pages.","What changed over the weeks?|What new question do you have?","Do not touch unknown plants or insects.","Add photographs or leaf rubbings."],
+["Practise scale, direction and symbols.","Walk the school boundary with your teacher.|Choose a scale, for example 1 step = 1 cm.|Pace out distances and note them.|Sketch a rough map.|Draw the final map with a title, key and north arrow.|Mark trees, water points and shade.|Compare maps.","Why does a map need a key?|How are the maps different?","Stay within the marked area.","Add a fire-drill route."],
+["Appreciate local work and learn to ask good questions.","Choose a helper with your teacher.|Write five questions on daily work, training and challenges.|Practise asking in pairs.|Host the talk and take notes.|Ask your questions politely.|Write a thank-you note.|Describe a day in their job.","Which skill matters most in this job?|How do they help the community?","Follow school visitor rules.","Make a class chart of local jobs."],
+["Plan teamwork around a clear goal.","Choose a small, safe area with your teacher.|Set a goal and a time.|Assign roles: collectors, sorters, a recorder and a supervisor.|Wear gloves and pick up light items only.|Sort the items. A teacher disposes of them.|Take before and after photos.|Reflect together.","What worked well?|What would we change?","Wear gloves. No glass, sharp or medical waste. Wash hands afterwards.","Make a sign to keep the area clean."],
+["Practise a basic life skill.","Cut a thread about as long as your arm, thread the needle and tie a knot.|Mark the place for the button.|Bring the needle up through the cloth and through one hole.|Go down the other hole and repeat four to six times.|Wind thread under the button and knot it behind.|Cut the thread and test with a gentle pull.","Where else is sewing useful?|What was the hardest part?","An adult supervises. Count needles before and after. Never put a needle in the mouth.","Mend a small seam."],
+["Know what a first-aid box contains and why.","Brainstorm what the box should hold.|Check your list with the school nurse or a teacher.|Draw each item and write its use: plasters, sterile gauze, wipes, bandage, scissors, gloves, thermometer.|Note when to call an adult.|Create a checklist with a check date.|Put it on the classroom wall.","Who should be told after an injury?|Why check the box regularly?","Do not give medicine. Practise only with a teacher.","Learn local emergency numbers."],
+["Plan a story visually using a clear structure.","Choose a main character and a problem.|Fold a paper into six boxes.|Use panels 1 and 2 for the beginning, 3 and 4 for the problem, 5 for the solution and 6 for the ending.|Sketch, then add captions.|Check that the story flows.|Present it to a partner and listen to feedback.","Which panel is the strongest?|How did pictures help the story?","Choose positive, respectful stories.","Perform your story aloud."],
+["Practise asking questions and listening.","Pair up and choose a topic such as a hobby.|Write five open questions starting with how or why.|Interview your partner and take notes.|Swap roles.|Write a paragraph summary.|Read it to your partner to check it is accurate.","Which question gave the longest answer?|How can you show you are listening?","Respect privacy. Skip anything your partner prefers not to answer.","Introduce your partner to the class."],
+["Design a clear message for an audience.","Choose a topic and an audience.|Plan a headline, an image and three facts.|Open an approved tool with your teacher.|Pick two colours and one font.|Add the facts and original images.|Proofread every word.|Credit your sources and save.","Is it readable from far away?|What is the main message?","Use only school-approved tools. Do not share personal information. Use your own or free-to-use images.","Print it for the notice board."],
+["Understand animation as a series of still frames.","Write a ten-second idea.|Storyboard 12 frames.|Make a paper figure and a background.|Fix the camera steady, for example on a stack of books.|Move the figure slightly, photograph and repeat.|Put the frames in order and play them quickly.","How many frames per second feel smooth?|What was hardest to control?","Use devices only as your teacher allows. Do not photograph identifiable people without permission.","Add sound."],
+["Understand buying, selling and profit.","In teams, make paper products.|Set the cost of materials in tokens.|Decide the price.|On market day, buyers receive tokens.|Record the sales.|Calculate profit = sales minus cost.|Discuss the results.","How did price affect sales?|What would you do differently?","Use play tokens only, never real cash.","Add a discount day."],
+["Tell the difference between needs and wants.","Cut out pictures of 15 items.|Define need and want.|Sort the pictures on your own.|Compare with a partner.|Discuss any differences.|Make a class chart.|Plan how you would spend a small budget.","Can something be both a need and a want?|Why might people sort differently?","Be sensitive to different family situations.","Write a needs-first budget."],
+["Learn how tension and length change pitch.","Stretch three bands of different thickness over an open box.|Pluck each one and listen.|Tighten one band and pluck again.|Record whether the note became higher or lower.|Slide a pencil under the bands to shorten them and compare.|Play a short tune.","Which band gave the highest note?|What changed when it was tighter?","Keep bands away from faces. Do not snap them.","Add a cardboard tube and notice how loudness changes."],
+["Speak with confidence and cooperate in a group.","Choose a community problem, such as littering.|Write a two-minute script with characters, a problem and a solution.|Assign roles, including a director and props.|Rehearse twice.|Perform.|The audience gives two kind comments and one suggestion.","What message did the skit give?|How did the group solve problems?","Avoid stereotypes. Keep content respectful.","Perform for a younger class."],
+["Practise teamwork and fair play.","Plan three stations: carry, balance and pass.|Mark clear, safe lanes.|Agree on rules and sportsmanship.|Make teams of four or five.|Time the runs.|Discuss strategy and run again.|Compare times.","How did you improve?|How did teammates support each other?","Use flat, dry ground. Warm up. No pushing.","Add a maths question at each station."],
+["Build body control and balance.","Lay a rope line on the ground.|Walk heel to toe along it.|Carry a cloth bag on your shoulder while walking.|Toss a bag towards a target.|Record the time or score for three tries.|Practise and try again.|Note any improvement.","What helped your balance?|How could we make it harder?","Use soft, flat ground. Have a partner ready. Never force anyone to take part.","Design a harder level."],
+["Learn how mirrors reflect light.","Cut a window near the top of one side and near the bottom of the opposite side of a long box. An adult helps.|Cut slanted slots at 45 degrees inside each end.|Slide a mirror into each slot so the shiny sides face each other.|Tape the edges of the mirrors.|Look through the bottom window to see over a low wall.|Draw the path of light with arrows.","Why do the mirrors sit at 45 degrees?|Where could a periscope be useful?","An adult cuts. Tape mirror edges. Never look at the Sun.","Make a longer periscope."],
+["Record weather and find patterns in the data.","Draw a table with date, sky, wind, temperature feel and rain.|Observe at the same time every day.|Use simple symbols.|Record for 14 days.|Count each type of sky.|Make a bar chart.|Write one pattern you noticed.","What patterns did you find?|How might this help farmers?","Do not look at the Sun.","Compare with a forecast."],
+["Appreciate pattern-making and learn a craft technique.","If possible, look at pictures or real items. Sketch three repeating patterns.|Tear newspaper into strips.|Mix flour and water into a thin paste.|Cover a bowl with cling film and layer strips over it.|Add three to four layers and dry fully, which takes one to two days.|Remove it and paint your pattern.","Which patterns inspired you?|Why is it important to check facts about traditions with local people?","Wash hands. Keep paste away from faces.","Interview an artisan about their work."],
+["Learn how seasons shape what people eat.","Ask family what they eat in each season.|List foods in four columns.|Ask how food is stored, for example drying or pickling.|Draw a circular calendar.|Mark which foods are fresh and which are stored.|Share one story.","Why do people store food?|How does the season change what we eat?","Be sensitive to different diets. Keep family information private.","Compare with another region."]
+];
+
+const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+ACTS.forEach((a,i)=>a.id=i);
+let saved=[];try{saved=JSON.parse(localStorage.getItem("b10saved")||"[]")}catch(e){}
+const store=()=>{try{localStorage.setItem("b10saved",JSON.stringify(saved))}catch(e){}};
+const card=a=>`<button class="card" data-a="${a.id}" style="--c:${CATS[a[0]][2]}"><div class="art" aria-hidden="true"><i>${CATS[a[0]][1]}</i></div><div class="meta"><span class="ctag">${esc(CATS[a[0]][0])}</span></div><h3>${esc(a[1])}</h3><p>${esc(a[2].split(". ")[0])}.</p><div class="meta"><span>Class ${esc(a[3].split(",").join(", "))}</span><span>${a[4]} min</span><span>${a[5]}</span><span>${esc(a[7])}</span></div></button>`;
+const list=(el,arr,empty)=>{el.innerHTML=arr.length?arr.map(card).join(""):`<p class="empty">${empty}</p>`};
+const A=ACTS;
+// categories
+$("#catgrid").innerHTML=CATS.map((c,i)=>`<a class="card cat" style="--c:${c[2]}" href="#/cat/${i}"><div class="art tall" aria-hidden="true"><i>${c[1]}</i></div><h3>${esc(c[0])}</h3><p>${A.filter(a=>a[0]==i).length} activities</p></a>`).join("");
+$("#fcat").innerHTML='<option value="">All</option>'+CATS.map((c,i)=>`<option value="${i}">${esc(c[0])}</option>`).join("");
+// featured, quick, local
+$("#feat").innerHTML=FEATURED.map(t=>A.find(a=>a[1]==t)).filter(Boolean).map(card).join("");
+list($("#quick"),A.filter(a=>a[4]<=30),"No quick activities yet.");
+list($("#local"),A.filter(a=>a[0]==9||a[0]==19||a[0]==1),"No activities yet.");
+// journey
+$("#days").innerHTML=DAYS.map((d,i)=>`<li><a href="#/cat/${d[1]}" style="--c:${CATS[d[1]][2]}"><b><small>Day</small>${i+1}</b><span><strong>${esc(d[0])}</strong><br><small>Open related activities</small></span></a></li>`).join("");
+$("#skills").innerHTML=SKILLS.map(s=>`<button class="chip" data-skill="${s}">${s}</button>`).join("");
+$("#mats").innerHTML=MATS.map(s=>`<button class="chip" data-mat="${s}">${s[0].toUpperCase()+s.slice(1)}</button>`).join("");
+$("#faqlist").innerHTML=FAQ.map(f=>`<details><summary>${esc(f[0])}</summary><p>${esc(f[1])}</p></details>`).join("");
+// search
+function search(){
+ const q=$("#q").value.trim().toLowerCase(),c=$("#fcls").value,d=$("#fdur").value,df=$("#fdif").value,ct=$("#fcat").value,m=$("#fmat").value;
+ const r=A.filter(a=>(!q||(a.slice(1).join(" ")+" "+CATS[a[0]][0]).toLowerCase().includes(q))&&(!c||a[3].split(",").includes(c))&&(!d||(d=="q"?a[4]<=30:d=="m"?a[4]>30&&a[4]<=60:a[4]>60))&&(!df||a[5]==df)&&(ct===""||a[0]==ct)&&(!m||a[6].includes(m)));
+ $("#count").textContent=`${r.length} of ${A.length} activities`;
+ list($("#results"),r,"No activities match. Try a different word or clear a filter.");
+}
+["#q","#fcls","#fdur","#fdif","#fcat","#fmat"].forEach(s=>$(s).addEventListener("input",search));
+$("#sform").addEventListener("submit",e=>{e.preventDefault();search()});
+document.addEventListener("click",e=>{
+ const k=e.target.closest("[data-skill],[data-mat]");
+ if(k){$("#q").value=k.dataset.skill||k.dataset.mat;["fcls","fdur","fdif","fcat","fmat"].forEach(i=>$("#"+i).value="");search();$("#search").scrollIntoView();return}
+ const c=e.target.closest("[data-a]");if(c)open(+c.dataset.a);
+});
+// dialog
+function open(id){const a=A[id],on=saved.includes(id),d=DET[id],li=s=>s.split("|").map(x=>`<li>${esc(x)}</li>`).join(""),t=a[4],p=Math.round(t*.15),q=Math.round(t*.2);
+ $("#dlgbody").innerHTML=`<div class="art" style="--c:${CATS[a[0]][2]}"><i>${CATS[a[0]][1]}</i></div><h3>${esc(a[1])}</h3><div class="meta"><span class="ctag" style="--c:${CATS[a[0]][2]}">${esc(CATS[a[0]][0])}</span><span>Class ${esc(a[3].split(",").join(", "))}</span><span>${t} min</span><span>${a[5]}</span><span>${esc(a[7])}</span></div>
+ <h4>Learning goal</h4><p>${esc(d[0])}</p><h4>${esc(a[2].split(". ")[0])}.</h4>
+ <h4>Materials</h4><ul>${li(a[6].split(", ").join("|"))}</ul>
+ <h4>Time plan</h4><ul><li><b>Get ready (${p} min):</b> read all steps, gather materials, and tell your teacher your plan.</li><li><b>Do the activity (${t-p-q} min):</b> follow the steps below.</li><li><b>Share and reflect (${q} min):</b> show your work and answer the questions.</li></ul>
+ <div class="safe"><b>Safety:</b> ${esc(d[3])} Always work with adult supervision.</div>
+ <h4>Step by step</h4><ol class="steps">${li(d[1])}</ol>
+ <h4>Think and discuss</h4><ul>${li(d[2])}</ul>
+ <h4>Go further</h4><p>${esc(d[4])}</p>
+ <h4>Reflect</h4><ul><li>What did I make or find out?</li><li>What was the hardest part, and how did I handle it?</li><li>What would I change next time?</li></ul>
+ <h4>Teacher tip</h4><p>Work in pairs or small groups, give time reminders, and praise effort and curiosity as well as the final result. Adapt steps to your classroom and local context.</p>
+ <p><button class="btn ghost" id="sv">${on?"Remove from saved":"Save activity"}</button></p>`;
+ $("#sv").onclick=()=>{saved=on?saved.filter(x=>x!=id):[...saved,id];store();renderSaved();$("#dlg").close()};
+ $("#dlg").showModal();$("#dlg").scrollTop=0;}
+function renderSaved(){list($("#saved"),saved.map(i=>A[i]),"No saved activities yet. Open any activity and choose Save activity.")}
+// routing
+function route(){
+ const m=location.hash.match(/^#\/cat\/(\d+)/),p=$("#page");
+ if(m&&CATS[m[1]]){const i=+m[1];$("#home").hidden=true;p.hidden=false;
+  p.innerHTML=`<button class="back" onclick="location.hash='#/'">‹ Back to home</button><h2>${CATS[i][1]} ${esc(CATS[i][0])}</h2><p class="muted">${A.filter(a=>a[0]==i).length} suggested activities.</p><div class="grid">${A.filter(a=>a[0]==i).map(card).join("")}</div>`;scrollTo(0,0);}
+ else{$("#home").hidden=false;p.hidden=true;}
+ $("#nav").classList.remove("open");$("#menu").setAttribute("aria-expanded","false");
+}
+addEventListener("hashchange",route);
+// theme + menu
+const root=document.documentElement;
+try{root.dataset.theme=localStorage.getItem("b10theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light")}catch(e){}
+$("#theme").onclick=()=>{root.dataset.theme=root.dataset.theme=="dark"?"light":"dark";try{localStorage.setItem("b10theme",root.dataset.theme)}catch(e){}};
+$("#menu").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#menu").setAttribute("aria-expanded",o)};
+search();renderSaved();route();
+if(location.protocol.startsWith('http')&&"serviceWorker"in navigator)addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+</script>
+</body>
+</html>
